@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Visual</title>
+</head>
+<body>
+
+  <nav id="nav">
+    <label for="show-menu" class="show-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="show-menu" role="button">
+  <img src="images/logoCrop.png" class="nav__logo">
+
+    <ul class="nav__ul" id="top-menu">
+      <li class="nav__ul--li"><a class="nav__ul--link" href="#team"><i class="fas fa-address-book"></i>Kernwaarden</a></li>
+      <li class="nav__ul--li"><a class="nav__ul--link" href="#over"><i class="fas fa-users"></i>Over ons</a></li>
+      <li class="nav__ul--li"><a class="nav__ul--link" href="#waarom"><i class="fas fa-briefcase"></i>Waarom</a></li>
+      <li class="nav__ul--li"><a class="nav__ul--link" href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+
+  </nav>
+  <div class="banner">
+    <img class="ree content" src="images/header.gif" alt="banner">
+  </div>
+
+<div id="div1">
+      <a id="team"></a>
+      <h2 id="codevisualTekst">Onze kernwaarden</h2>
+      <div id="seperator"></div>
+
+  <div id="grid">
+
+    <div class="grid-item">
+      <h2>Rollen</h2>
+      <p>In ons team wordt iedereen gelijkwaardig behandeld, er zal altijd respect voor elkaar onderling zijn, en iedereen zal elkaar met respect behandelen.</p>
+    </div>
+
+    <div class="grid-item">
+      <h2>Hoe gaan wij te werk</h2>
+      <p>Eerst zullen wij de opdracht analyseren, en het zo goed mogelijk bespreken met de opdrachtgever. Daarna zullen we schetsen maken, en het tot testen omzetten. Als we alles hebben getest, en als de opdrachtgever blij is met hoe het eruitziet, zullen wij het realizeren tot een uiteindelijk resultaat</p>
+    </div>
+
+    <div class="grid-item">
+      <h2>Communicatie</h2>
+      <p>Communicatie is erg belangrijk in ons team, als er ergens een probleem is, willen wij het graag gelijk weten.
+      Dat geld ook voor de opdrachtgever, als hij niet blij is met wat wij maken, dan zouden wij het waarderen dat we het gelijk weten.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div id="div2">
+  <div id="textWrap">
+      <a id="over"></a>
+    <h3 id="h3Div2">Over ons</h3>
+    <div id="seperator2"></div>
+    <p id="pDiv2" data-aos="fade-right">Wij zijn een groepje mediadevelopers van het Mediacollege Amsterdam. We zitten allemaal in het tweede jaar van de driejarige opleiding. We zijn allemaal fullstack developers, maar we hebben wel allemaal onze voorkeuren qua programmeer talen.</p>
+
+  </div>
+</div>
+
+<div id="div3">
+<a id="waarom"></a>
+  <div id="textWrap3">
+  <h3 id="h3Div3">Waarom Code Visual</h3>
+
+    <div id="seperator3"></div>
+
+  <ul id="ulDiv3" data-aos="fade-right">
+    <li><i class="fas fa-check"></i>Vertrouwbaar team</li>
+    <li><i class="fas fa-check"></i>Hard werkend</li>
+    <li><i class="fas fa-check"></i>Veel ervaring</li>
+    <li><i class="fas fa-check"></i>Goede tarieven</li>
+    <li><i class="fas fa-check"></i>Enthousiast team</li>
+    <li><i class="fas fa-check"></i>Goede communicatie</li>
+  </ul>
+</div>
+</div>
+
+<!-- Contact formulier -->
+<div id="div4">
+
+  <h3 id="h3Div4">Neem contact met ons op</h3>
+  <a id="contact"></a>
+
+<div class="formulier">
+
+  <form method="post" action="verzend.php">
+
+<input class="form-naam"  type="text" name="naam"   placeholder="   naam..." required>
+<input class="form-onderwerp" type="text" name="onderwerp"   placeholder="   onderwerp..." required>
+<input class="form-email" type="email"  name="mailadres" placeholder="   uw emailadres... " required>
+
+<textarea class="form-inhoud" name="inhoud"  rows="8" cols="80" placeholder="type hier..." required></textarea>
+<input class="form-submit" type="submit" value="Submit">
+</form>
+</div>
+</div>
+
+<br>
+<br>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+var lastId,
+    topMenu = $("#top-menu"),
+    topHeight = $(".banner"),
+    topMenuHeight = topMenu.outerHeight()+0,
+    // All list items
+    menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href='#"+id+"']").parent().addClass("active");
+   }
+});
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+10;
+  $('html, body').stop().animate({
+      scrollTop: offsetTop
+  }, 500);
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

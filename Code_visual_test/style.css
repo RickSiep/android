@@ -1,0 +1,428 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Vollkorn', serif;
+}
+#nav{
+  height: 60px;
+  background-color: white;
+  text-align: center;
+z-index: 10;
+border-bottom: 2px solid black;
+-webkit-box-shadow: -5px 10px 16px -5px rgba(0,0,0,0.22);
+-moz-box-shadow: -5px 10px 16px -5px rgba(0,0,0,0.22);
+box-shadow: -5px 10px 16px -5px rgba(0,0,0,0.22);
+
+}
+.nav__ul{
+  /* Geen rondjes */
+  list-style-type: none;
+  /* Margin en padding uit */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  /* Overflow uitzetten */
+
+}
+.nav__ul--li{
+  display: block;
+  /* Left swipe on tinder */
+  float: left;
+  /* Make the font bigger */
+  font-size: 25px;
+}
+.nav__ul--link{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 8px;
+  margin-right: 8px;
+  color: #275196;
+  background-color: white;
+}
+.nav__ul--link:hover{
+  color: #7ebdea;
+}
+.nav__logo{
+  height: 20px;
+  float: right;
+  margin-right: 2px;
+  margin-top: 16px;
+}
+/* Underline */
+.nav__ul--link:after{
+  display: block;
+  content: '';
+  border-bottom: solid 3px #7ebdea;
+  transform: scaleX(0);
+  transition: transform 150ms ease-out;
+}
+.nav__ul--link:hover:after {
+  transform: scaleX(1);
+  transform-origin:  50% 0%;
+}
+
+input[type=checkbox]:checked ~ .nav__ul{
+    display: block;
+}
+input[type=checkbox]{
+    display: none;
+}
+.show-menu {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background: black;
+    text-align: center;
+    padding: 18.6px 0px;
+    display: none;
+}
+/* Sticky Nav */
+.content {
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+/* Grid */
+#grid{
+    padding-left: 10px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-item{
+  background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.test{
+  height: 50px;
+}
+
+.active i{
+  color: red;
+}
+/* Div 1 style */
+#div1{
+    height: 500px;
+  background-color: white;
+}
+#codevisualTekst{
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#seperator{
+  height:1px;
+background:#717171;
+border-bottom:1px solid #313030;
+width: 100px;
+display: block;
+margin-right: auto;
+margin-left: auto;
+}
+/* Div 2 */
+#div2{
+    height: 600px;
+  background-image: url("images/work.jpg");
+  background-size: cover;
+  color: white;
+}
+#textWrap{
+  padding-top: 120px;
+  padding-left: 150px;
+  width: 600px;
+  height: 500px;
+}
+#h3Div2{
+  font-size: 3em;
+}
+#seperator2{
+  height:1px;
+background:#717171;
+border-bottom:1px solid white;
+width: 350px;
+display: block;
+}
+#pDiv2{
+  padding-top: 40px;
+}
+
+/* Div 3 */
+#div3{
+    height: 523.8px;
+      border-bottom: 1px solid black;
+}
+#h3Div3{
+  font-size: 3em;
+}
+.fa-check{
+  color: blue;
+}
+#textWrap3{
+  padding-top: 120px;
+  padding-left: 150px;
+  width: 1000px;
+}
+#ulDiv3{
+  padding-top: 100px;
+  list-style-type: none;
+}
+#ulDiv3 li{
+  margin-bottom: 4px;
+}
+#seperator3{
+  height:1px;
+background:#717171;
+border-bottom:1px solid black;
+width: 500px;
+display: block;
+}
+i{
+  margin-right: 10px;
+}
+#customer{
+  float: right;
+  width: 40%;
+}
+/* Banner */
+.ree{
+width: 100%;
+height: auto;
+
+}
+
+/* Formulier */
+#div4{
+  height: 700px;
+  background-color: white;
+
+}
+#h3Div4{
+  padding-top: 30px;
+  text-align: center;
+  font-size: 3em;
+}
+#seperator4{
+  height:1px;
+background:#717171;
+border-bottom:1px solid white;
+width: 350px;
+display: block;
+}
+.form-naam, .form-onderwerp, .form-email {
+margin-left: 20px;
+border: 1px solid lightgrey;
+border-radius: 2px;
+margin-right: 20px;
+outline: none;
+width: 200px;
+height: 30px;
+}
+
+.form-inhoud {
+  margin-top: 35px;
+  width: 690px;
+  height: 300px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+}
+
+
+
+.form-submit {
+  border-radius: 2px;
+  margin-top: 35px;
+  width: 695px;
+  color: #fff;
+  font-size: 1.2em;
+  height: 40px;
+  border: none;
+  text-decoration: none;
+  background-color: rgb(2, 98, 255)
+}
+
+
+}
+.stappen {
+
+  -webkit-box-shadow: 0px 1px 9px 2px rgba(112,101,112,1);
+-moz-box-shadow: 0px 1px 9px 2px rgba(112,101,112,1);
+box-shadow: 0px 1px 9px 2px rgba(112,101,112,1);
+  margin-left: 12.5%;
+  width: 75%;
+  margin-top: 100px;
+  background-color: white;
+  min-height: 40em;
+  z-index: 1;
+}
+
+.circel {
+  margin-left: 100px;
+  float:left;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: rgb(252, 60, 60);
+}
+
+.line {
+  margin-top: 50px;
+  width: 750px;
+  border-bottom: 3px  dashed rgb(252, 60, 60);
+  margin-left: 10px;
+}
+
+.formulier {
+  padding-top: 10px;
+  text-align: center;
+  min-height: 20em;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 100px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  overflow: auto;
+  outline: none;
+}
+@media screen and (max-width : 1122px){
+  .form-naam, .form-onderwerp, .form-email {
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 100px;
+  height: 30px;
+  }
+}
+@media screen and (max-width : 890px){
+  .form-naam, .form-onderwerp, .form-email {
+  margin-left: 1px;
+  margin-right: 1px;
+  width: 100px;
+  height: 30px;
+  }
+}
+@media screen and (max-width : 878px){
+  .form-inhoud {
+    width: 300px;
+    height: 300px;
+  }
+  .form-submit {
+    width: 300px;
+
+  }
+
+}
+@media screen and (max-width : 844px){
+  .content{
+    padding: 0;
+  }
+    #nav{
+      position: relative;
+    }
+    .nav__ul {
+        display: none;
+    }
+    .nav__ul .nav__ul--li, .nav__ul--li .nav__ul--link {
+        width: 100%;
+        border: solid 1px black;
+    }
+    .show-menu {
+        display:block;
+    }
+    .nav__logo{
+      display: none;
+    }
+}
+
+@media screen and (max-width : 762px){
+  #textWrap{
+      padding-top: 60px;
+      padding-left: 50px;
+      width: 300px;
+      height: 300px;
+  }
+  #pDiv2{
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width : 656px) {
+  #textWrap3{
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 1000px;
+  }
+  #seperator3{
+    width: 200px;
+  }
+}
+@media screen and (max-width : 646px) {
+  #grid{
+    grid-template-columns: 2fr
+  }
+  #div1{
+    height: 600px;
+  }
+}
+@media screen and (max-width : 516px) {
+  #textWrap3{
+    padding-top: 0px;
+    padding-left: 0px;
+    width: 1000px;
+  }
+  #seperator3{
+    width: 50px;
+  }
+  #h3Div3{
+    font-size: 2em;
+  }
+}
+@media screen and (max-width : 420px) {
+  #div1{
+    height: 800px;
+  }
+}
+@media screen and (max-width : 408px) {
+  #textWrap{
+      padding-top: 0px;
+      padding-left: 0px;
+      width: 300px;
+      height: 300px;
+  }
+  #pDiv2{
+    padding-top: 10px;
+  }
+  #seperator2{
+    width: 200px;
+  }
+}
+@media screen and (max-width : 332px) {
+  #div1{
+    height: 900px;
+  }
+}
+@media screen and (max-width : 296px) {
+  #textWrap{
+      padding-top: 0px;
+      padding-left: 0px;
+      width: 200px;
+      height: 200px;
+  }
+  #pDiv2{
+    padding-top: 10px;
+  }
+  #seperator2{
+    width: 200px;
+  }
+}
